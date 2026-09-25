@@ -15,7 +15,7 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v4
 
-      - name: Downcase GitHub actor for GHCR
+      - name: Set lowercased GHCR username
         run: echo "GHCR_USER=$(echo "${{ github.actor }}" | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
       - name: Build the Docker image
